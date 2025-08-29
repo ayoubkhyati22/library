@@ -45,7 +45,7 @@ export function ProductCard({ product, category }: ProductCardProps) {
       className="h-full"
     >
       <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
-        <div className="aspect-[4/5] relative overflow-hidden">
+        <div className="aspect-square relative overflow-hidden">
           <img
             src={product.image}
             alt={product.title[currentLang]}
