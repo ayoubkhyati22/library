@@ -67,7 +67,7 @@
     "noProducts": "لا توجد منتجات",
     "loadMore": "تحميل المزيد",
     "noDescription": "لا يوجد وصف متاح",
-    "whatsappMessage": "مرحبا، أنا مهتم بهذا الكتاب: {{title}} ({{id}}) - السعر: {{price}} درهم"
+    "whatsappMessage": "مرحبا، أنا مهتم بهذا الكتاب: {{title}} - السعر: {{price}} درهم"
   },
   "category": {
     "all": "جميع الفئات",

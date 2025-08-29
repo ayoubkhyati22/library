@@ -52,14 +52,13 @@ export function ProductDetailPage() {
     const phone = import.meta.env.VITE_WHATSAPP_PHONE;
     const message = t('product.whatsappMessage', {
       title: product.title[currentLang],
-      id: product.id,
       price: formatPrice(product.price),
     });
     
     const url = generateWhatsAppURL(
       phone,
       product.title[currentLang],
-      product.id,
+      '',
       product.price,
       message
     );
@@ -214,10 +213,6 @@ export function ProductDetailPage() {
                 <CardContent className="p-4">
                   <h3 className="font-semibold mb-2">Informations</h3>
                   <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">ID:</span>
-                      <span className="font-mono">{product.id}</span>
-                    </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Catégorie:</span>
                       <span>{category?.name[currentLang] || 'Non définie'}</span>

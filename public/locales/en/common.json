@@ -67,7 +67,7 @@
     "noProducts": "No products found",
     "loadMore": "Load More",
     "noDescription": "No description available",
-    "whatsappMessage": "Hello, I'm interested in this book: {{title}} ({{id}}) - Price: {{price}} MAD"
+    "whatsappMessage": "Hello, I'm interested in this book: {{title}} - Price: {{price}} MAD"
   },
   "category": {
     "all": "All categories",

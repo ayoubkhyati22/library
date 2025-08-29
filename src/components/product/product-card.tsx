@@ -23,14 +23,13 @@ export function ProductCard({ product, category }: ProductCardProps) {
     const phone = import.meta.env.VITE_WHATSAPP_PHONE;
     const message = t('product.whatsappMessage', {
       title: product.title[currentLang],
-      id: product.id,
       price: formatPrice(product.price),
     });
     
     const url = generateWhatsAppURL(
       phone,
       product.title[currentLang],
-      product.id,
+      '',
       product.price,
       message
     );

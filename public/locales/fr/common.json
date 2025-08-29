@@ -67,7 +67,7 @@
     "noProducts": "Aucun produit trouvé",
     "loadMore": "Charger plus",
     "noDescription": "Aucune description disponible",
-    "whatsappMessage": "Bonjour, je suis intéressé(e) par ce livre: {{title}} ({{id}}) - Prix: {{price}} MAD"
+    "whatsappMessage": "Bonjour, je suis intéressé(e) par ce livre: {{title}} - Prix: {{price}} MAD"
   },
   "category": {
     "all": "Toutes les catégories",
