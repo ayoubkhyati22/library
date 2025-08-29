@@ -8,6 +8,7 @@ import { ProtectedRoute } from '../components/admin/protected-route';
 import { HomePage } from '../pages/home';
 import { AboutPage } from '../pages/about';
 import { ContactPage } from '../pages/contact';
+import { ProductDetailPage } from '../pages/product-detail';
 import { AdminLoginPage } from '../pages/admin/login';
 import { AdminDashboardPage } from '../pages/admin/dashboard';
 import { AdminProductsPage } from '../pages/admin/products';
@@ -37,6 +38,7 @@ export function App() {
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<HomePage />} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           

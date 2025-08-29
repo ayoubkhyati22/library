@@ -1,45 +1,21 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
 import { motion } from 'framer-motion';
-import { toast } from 'sonner';
 import { Container } from '../components/layout/container';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-
-const contactSchema = z.object({
-  name: z.string().min(2, 'Le nom doit contenir au moins 2 caractères'),
-  email: z.string().email('Email invalide'),
-  message: z.string().min(10, 'Le message doit contenir au moins 10 caractères'),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
+import { generateWhatsAppURL, openWhatsApp } from '../lib/whatsapp';
 
 export function ContactPage() {
   const { t } = useTranslation();
-  
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
-  });
 
-  const onSubmit = async (data: ContactFormData) => {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+  const handleWhatsAppContact = () => {
+    const phone = import.meta.env.VITE_WHATSAPP_PHONE;
+    const message = "Bonjour, j'aimerais avoir plus d'informations sur vos services.";
     
-    console.log('Contact form submitted:', data);
-    toast.success(t('toast.messageSent'));
-    reset();
+    const url = generateWhatsAppURL(phone, '', '', 0, message);
+    openWhatsApp(url);
   };
 
   const contactInfo = [
@@ -89,62 +65,45 @@ export function ContactPage() {
             >
               <Card>
                 <CardHeader>
-                  <CardTitle>Envoyez-nous un message</CardTitle>
+                  <CardTitle>Contactez-nous sur WhatsApp</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                    <div>
-                      <Label htmlFor="name">{t('form.name')} *</Label>
-                      <Input
-                        id="name"
-                        {...register('name')}
-                        className={errors.name ? 'border-destructive' : ''}
-                      />
-                      {errors.name && (
-                        <p className="text-sm text-destructive mt-1">
-                          {errors.name.message}
-                        </p>
-                      )}
+                  <div className="space-y-6">
+                    <div className="text-center">
+                      <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <MessageCircle className="w-10 h-10 text-green-600" />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">
+                        Discutons sur WhatsApp
+                      </h3>
+                      <p className="text-muted-foreground mb-6">
+                        Contactez-nous directement sur WhatsApp pour une réponse rapide et personnalisée.
+                      </p>
                     </div>
 
-                    <div>
-                      <Label htmlFor="email">{t('form.email')} *</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        {...register('email')}
-                        className={errors.email ? 'border-destructive' : ''}
-                      />
-                      {errors.email && (
-                        <p className="text-sm text-destructive mt-1">
-                          {errors.email.message}
-                        </p>
-                      )}
-                    </div>
-
-                    <div>
-                      <Label htmlFor="message">{t('form.message')} *</Label>
-                      <Textarea
-                        id="message"
-                        rows={4}
-                        {...register('message')}
-                        className={errors.message ? 'border-destructive' : ''}
-                      />
-                      {errors.message && (
-                        <p className="text-sm text-destructive mt-1">
-                          {errors.message.message}
-                        </p>
-                      )}
+                    <div className="bg-muted/50 rounded-lg p-4 space-y-2">
+                      <h4 className="font-medium">Pourquoi WhatsApp ?</h4>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• Réponse rapide et directe</li>
+                        <li>• Partage facile d'images de livres</li>
+                        <li>• Communication en temps réel</li>
+                        <li>• Disponible 7j/7</li>
+                      </ul>
                     </div>
 
                     <Button
-                      type="submit"
-                      className="w-full"
-                      disabled={isSubmitting}
+                      onClick={handleWhatsAppContact}
+                      className="w-full bg-green-600 hover:bg-green-700 text-white gap-2 h-12"
+                      size="lg"
                     >
-                      {isSubmitting ? 'Envoi...' : t('actions.submit')}
+                      <MessageCircle className="h-5 w-5" />
+                      Ouvrir WhatsApp
                     </Button>
-                  </form>
+
+                    <p className="text-xs text-center text-muted-foreground">
+                      En cliquant sur le bouton, WhatsApp s'ouvrira avec un message pré-rempli
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>

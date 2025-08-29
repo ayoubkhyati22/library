@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
@@ -45,25 +46,29 @@ export function ProductCard({ product, category }: ProductCardProps) {
       className="h-full"
     >
       <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
-        <div className="aspect-square relative overflow-hidden">
-          <img
-            src={product.image}
-            alt={product.title[currentLang]}
-            className="w-full h-full object-cover transition-transform hover:scale-105"
-            loading="lazy"
-          />
-          {category && (
-            <Badge className="absolute top-2 left-2" variant="secondary">
-              {category.name[currentLang]}
-            </Badge>
-          )}
-        </div>
+        <Link to={`/product/${product.id}`}>
+          <div className="aspect-square relative overflow-hidden">
+            <img
+              src={product.image}
+              alt={product.title[currentLang]}
+              className="w-full h-full object-cover transition-transform hover:scale-105"
+              loading="lazy"
+            />
+            {category && (
+              <Badge className="absolute top-2 left-2" variant="secondary">
+                {category.name[currentLang]}
+              </Badge>
+            )}
+          </div>
+        </Link>
         
         <CardContent className="p-4 flex flex-col gap-3">
           <div className="space-y-1">
-            <h3 className="font-semibold text-lg leading-tight line-clamp-2">
-              {product.title[currentLang]}
-            </h3>
+            <Link to={`/product/${product.id}`}>
+              <h3 className="font-semibold text-lg leading-tight line-clamp-2 hover:text-primary transition-colors">
+                {product.title[currentLang]}
+              </h3>
+            </Link>
             <p className="text-sm text-muted-foreground line-clamp-3">
               {product.description[currentLang] || t('product.noDescription')}
             </p>
