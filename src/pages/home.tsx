@@ -87,7 +87,17 @@ export function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/10 to-secondary/10 py-16 overflow-hidden">
+      <section className="relative py-16 overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&w=1200)'
+          }}
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+        
         <Container>
           <motion.div
             className="relative z-10"
@@ -95,10 +105,10 @@ export function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center space-y-6"
           >
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
               {t('hero.title')}
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
               {t('hero.subtitle')}
             </p>
             <div className="max-w-md mx-auto">
@@ -127,6 +137,7 @@ export function HomePage() {
                 categories={categories}
                 selectedCategoryId={selectedCategoryId}
                 onCategoryChange={setSelectedCategoryId}
+                loading={loading}
               />
               
               <PriceFilter
@@ -163,7 +174,7 @@ export function HomePage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-              className="lg:col-span-3"
+              className="lg:col-span-3 flex flex-col"
             >
               <ImageGallery />
             </motion.div>

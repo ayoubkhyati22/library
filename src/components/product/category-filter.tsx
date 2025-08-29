@@ -1,21 +1,28 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Badge } from '@/components/ui/badge';
+import { TagsSkeleton } from '@/components/ui/loading-skeleton';
 import { Category } from '../../lib/storage';
 
 interface CategoryFilterProps {
   categories: Category[];
   selectedCategoryId?: string;
   onCategoryChange: (categoryId?: string) => void;
+  loading?: boolean;
 }
 
 export function CategoryFilter({ 
   categories, 
   selectedCategoryId, 
-  onCategoryChange 
+  onCategoryChange,
+  loading
 }: CategoryFilterProps) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language as keyof Category['name'];
+
+  if (loading) {
+    return <TagsSkeleton />;
+  }
 
   return (
     <div className="space-y-3">
