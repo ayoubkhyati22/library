@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Category } from '../../lib/storage';
 
 interface CategoryFilterProps {
@@ -19,32 +18,28 @@ export function CategoryFilter({
   const currentLang = i18n.language as keyof Category['name'];
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="text-lg">Catégories</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-2">
-        <Button
-          variant={!selectedCategoryId ? 'default' : 'ghost'}
-          size="sm"
+    <div className="space-y-3">
+      <h3 className="font-semibold text-lg">Catégories</h3>
+      <div className="flex flex-wrap gap-2">
+        <Badge
+          variant={!selectedCategoryId ? 'default' : 'outline'}
+          className="cursor-pointer hover:bg-primary/80 px-3 py-1"
           onClick={() => onCategoryChange()}
-          className="w-full justify-start"
         >
           {t('category.all')}
-        </Button>
+        </Badge>
         
         {categories.map((category) => (
-          <Button
+          <Badge
             key={category.id}
-            variant={selectedCategoryId === category.id ? 'default' : 'ghost'}
-            size="sm"
+            variant={selectedCategoryId === category.id ? 'default' : 'outline'}
+            className="cursor-pointer hover:bg-primary/80 px-3 py-1"
             onClick={() => onCategoryChange(category.id)}
-            className="w-full justify-start"
           >
             {category.name[currentLang]}
-          </Button>
+          </Badge>
         ))}
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }
