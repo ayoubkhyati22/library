@@ -4,7 +4,9 @@ import { motion } from 'framer-motion';
 import { Container } from '../components/layout/container';
 import { ProductGrid } from '../components/product/product-grid';
 import { CategoryFilter } from '../components/product/category-filter';
+import { PriceFilter } from '../components/product/price-filter';
 import { SearchBar } from '../components/product/search-bar';
+import { ImageGallery } from '../components/layout/image-gallery';
 import { Product, Category, getProducts, getCategories, searchProducts, getProductsByCategory } from '../lib/storage';
 import { usePagination } from '../hooks/usePagination';
 import { PaginationControls } from '../components/ui/pagination-controls';
@@ -15,6 +17,8 @@ export function HomePage() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [selectedCategoryId, setSelectedCategoryId] = useState<string | undefined>();
   const [searchQuery, setSearchQuery] = useState('');
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(1000);
   const [loading, setLoading] = useState(true);
 
   // Pagination for filtered products
@@ -36,7 +40,7 @@ export function HomePage() {
 
   useEffect(() => {
     filterProducts().catch(console.error);
-  }, [selectedCategoryId, searchQuery]);
+  }, [selectedCategoryId, searchQuery, minPrice, maxPrice]);
 
   const loadData = async () => {
     setLoading(true);
@@ -67,7 +71,17 @@ export function HomePage() {
       filteredProducts = await getProductsByCategory(selectedCategoryId);
     }
 
+    // Apply price filter
+    filteredProducts = filteredProducts.filter(
+      product => product.price >= minPrice && product.price <= maxPrice
+    );
+
     setProducts(filteredProducts);
+  };
+
+  const handlePriceChange = (min: number, max: number) => {
+    setMinPrice(min);
+    setMaxPrice(max);
   };
 
   return (
@@ -101,31 +115,59 @@ export function HomePage() {
       {/* Products Section */}
       <section className="py-12">
         <Container>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <CategoryFilter
-              categories={categories}
-              selectedCategoryId={selectedCategoryId}
-              onCategoryChange={setSelectedCategoryId}
-            />
-            
-            <ProductGrid
-              products={paginatedProducts}
-              categories={categories}
-              loading={loading}
-            />
-            
-            <PaginationControls
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={goToPage}
-              canGoPrevious={canGoPrevious}
-              canGoNext={canGoNext}
-            />
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            {/* Sidebar gauche - Filtres */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+              className="lg:col-span-3 space-y-6"
+            >
+              <CategoryFilter
+                categories={categories}
+                selectedCategoryId={selectedCategoryId}
+                onCategoryChange={setSelectedCategoryId}
+              />
+              
+              <PriceFilter
+                minPrice={minPrice}
+                maxPrice={maxPrice}
+                onPriceChange={handlePriceChange}
+              />
+            </motion.div>
+
+            {/* Contenu principal - Produits */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="lg:col-span-6"
+            >
+              <ProductGrid
+                products={paginatedProducts}
+                categories={categories}
+                loading={loading}
+              />
+              
+              <PaginationControls
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={goToPage}
+                canGoPrevious={canGoPrevious}
+                canGoNext={canGoNext}
+              />
+            </motion.div>
+
+            {/* Sidebar droite - Galerie d'images */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+              className="lg:col-span-3"
+            >
+              <ImageGallery />
+            </motion.div>
+          </div>
         </Container>
       </section>
     </div>
