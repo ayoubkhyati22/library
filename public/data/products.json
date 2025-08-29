@@ -1,0 +1,104 @@
+[
+  {
+    "id": "prod-001",
+    "title": {
+      "fr": "L'Étranger",
+      "en": "The Stranger",
+      "ar": "الغريب"
+    },
+    "price": 129.0,
+    "image": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "categoryId": "cat-001",
+    "description": {
+      "fr": "Roman philosophique classique qui explore l'absurdité de la condition humaine.",
+      "en": "A classic philosophical novel exploring the absurdity of the human condition.",
+      "ar": "رواية فلسفية كلاسيكية تستكشف عبثية الحالة الإنسانية."
+    },
+    "createdAt": "2025-01-05T10:00:00.000Z"
+  },
+  {
+    "id": "prod-002",
+    "title": {
+      "fr": "Une brève histoire du temps",
+      "en": "A Brief History of Time",
+      "ar": "تاريخ موجز للزمن"
+    },
+    "price": 189.0,
+    "image": "https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "categoryId": "cat-002",
+    "description": {
+      "fr": "Une introduction accessible aux mystères de l'univers et du temps.",
+      "en": "An accessible introduction to the mysteries of the universe and time.",
+      "ar": "مقدمة مفهومة لأسرار الكون والزمن."
+    },
+    "createdAt": "2025-01-06T14:30:00.000Z"
+  },
+  {
+    "id": "prod-003",
+    "title": {
+      "fr": "Les Misérables",
+      "en": "Les Misérables",
+      "ar": "البؤساء"
+    },
+    "price": 299.0,
+    "image": "https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "categoryId": "cat-001",
+    "description": {
+      "fr": "Chef-d'œuvre de la littérature française du XIXe siècle.",
+      "en": "Masterpiece of 19th-century French literature.",
+      "ar": "تحفة من الأدب الفرنسي في القرن التاسع عشر."
+    },
+    "createdAt": "2025-01-07T09:15:00.000Z"
+  },
+  {
+    "id": "prod-004",
+    "title": {
+      "fr": "Sapiens",
+      "en": "Sapiens",
+      "ar": "العاقل"
+    },
+    "price": 219.0,
+    "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "categoryId": "cat-003",
+    "description": {
+      "fr": "Une exploration fascinante de l'histoire de l'humanité.",
+      "en": "A fascinating exploration of human history.",
+      "ar": "استكشاف ممتع لتاريخ الإنسانية."
+    },
+    "createdAt": "2025-01-08T16:45:00.000Z"
+  },
+  {
+    "id": "prod-005",
+    "title": {
+      "fr": "Le Petit Prince",
+      "en": "The Little Prince",
+      "ar": "الأمير الصغير"
+    },
+    "price": 89.0,
+    "image": "https://images.pexels.com/photos/1370296/pexels-photo-1370296.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "categoryId": "cat-005",
+    "description": {
+      "fr": "Un conte poétique et philosophique intemporel pour petits et grands.",
+      "en": "A timeless poetic and philosophical tale for young and old.",
+      "ar": "حكاية شعرية وفلسفية خالدة للصغار والكبار."
+    },
+    "createdAt": "2025-01-09T11:20:00.000Z"
+  },
+  {
+    "id": "prod-006",
+    "title": {
+      "fr": "Méditations métaphysiques",
+      "en": "Meditations on First Philosophy",
+      "ar": "التأملات الميتافيزيقية"
+    },
+    "price": 159.0,
+    "image": "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "categoryId": "cat-004",
+    "description": {
+      "fr": "Œuvre fondatrice de la philosophie moderne.",
+      "en": "Foundational work of modern philosophy.",
+      "ar": "عمل أساسي في الفلسفة الحديثة."
+    },
+    "createdAt": "2025-01-10T13:10:00.000Z"
+  }
+]

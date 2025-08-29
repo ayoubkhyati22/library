@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "admin": "Admin",
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "categories": "Categories"
+  },
+  "actions": {
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "search": "Search",
+    "filter": "Filter",
+    "login": "Login",
+    "logout": "Logout",
+    "submit": "Submit",
+    "back": "Back",
+    "viewMore": "View More",
+    "contactWhatsApp": "Buy"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "password": "Password",
+    "title": "Title",
+    "price": "Price",
+    "author": "Author",
+    "publisher": "Publisher",
+    "isbn": "ISBN",
+    "description": "Description",
+    "category": "Category",
+    "image": "Image",
+    "required": "This field is required",
+    "emailInvalid": "Invalid email",
+    "minLength": "Minimum {{count}} characters",
+    "positiveNumber": "Must be a positive number"
+  },
+  "toast": {
+    "saved": "Saved successfully",
+    "updated": "Updated successfully",
+    "deleted": "Deleted successfully",
+    "error": "An error occurred",
+    "loginSuccess": "Login successful",
+    "loginError": "Invalid credentials",
+    "messageSent": "Message sent successfully",
+    "loggedOut": "Logged out successfully"
+  },
+  "confirm": {
+    "delete": "Are you sure you want to delete this item?",
+    "deleteDescription": "This action cannot be undone.",
+    "yes": "Yes, delete",
+    "no": "Cancel"
+  },
+  "hero": {
+    "title": "Discover our book collection",
+    "subtitle": "Thousands of books await you",
+    "searchPlaceholder": "Search for a book, author..."
+  },
+  "product": {
+    "by": "by",
+    "noProducts": "No products found",
+    "loadMore": "Load More",
+    "noDescription": "No description available",
+    "whatsappMessage": "Hello, I'm interested in this book: {{title}} ({{id}}) - Price: {{price}} MAD"
+  },
+  "category": {
+    "all": "All categories",
+    "noCategories": "No categories"
+  },
+  "about": {
+    "title": "About our library",
+    "description": "We are passionate about books and strive to offer you the best selection of titles in all categories."
+  },
+  "contact": {
+    "title": "Contact us",
+    "description": "Feel free to contact us for any questions",
+    "info": "Contact Information",
+    "address": "Address",
+    "phone": "Phone",
+    "hours": "Opening Hours"
+  },
+  "admin": {
+    "title": "Administration",
+    "loginTitle": "Admin Login",
+    "welcome": "Welcome to the administration area",
+    "stats": {
+      "totalProducts": "Total Products",
+      "totalCategories": "Total Categories",
+      "recentlyAdded": "Recently Added"
+    }
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "ar": "العربية"
+  }
+}

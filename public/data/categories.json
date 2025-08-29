@@ -1,0 +1,52 @@
+[
+  {
+    "id": "cat-001",
+    "name": {
+      "fr": "Romans",
+      "en": "Novels",
+      "ar": "روايات"
+    },
+    "slug": "romans",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "cat-002",
+    "name": {
+      "fr": "Sciences",
+      "en": "Science",
+      "ar": "علوم"
+    },
+    "slug": "sciences",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "cat-003",
+    "name": {
+      "fr": "Histoire",
+      "en": "History",
+      "ar": "تاريخ"
+    },
+    "slug": "histoire",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "cat-004",
+    "name": {
+      "fr": "Philosophie",
+      "en": "Philosophy",
+      "ar": "فلسفة"
+    },
+    "slug": "philosophie",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "cat-005",
+    "name": {
+      "fr": "Littérature jeunesse",
+      "en": "Children's Literature",
+      "ar": "أدب الأطفال"
+    },
+    "slug": "litterature-jeunesse",
+    "createdAt": "2025-01-01T00:00:00.000Z"
+  }
+]

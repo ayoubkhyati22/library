@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "admin": "Admin",
+    "dashboard": "Tableau de bord",
+    "products": "Produits",
+    "categories": "Catégories"
+  },
+  "actions": {
+    "add": "Ajouter",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "login": "Se connecter",
+    "logout": "Se déconnecter",
+    "submit": "Envoyer",
+    "back": "Retour",
+    "viewMore": "Voir plus",
+    "contactWhatsApp": "Acheter"
+  },
+  "form": {
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "password": "Mot de passe",
+    "title": "Titre",
+    "price": "Prix",
+    "author": "Auteur",
+    "publisher": "Éditeur",
+    "isbn": "ISBN",
+    "description": "Description",
+    "category": "Catégorie",
+    "image": "Image",
+    "required": "Ce champ est obligatoire",
+    "emailInvalid": "Email invalide",
+    "minLength": "Minimum {{count}} caractères",
+    "positiveNumber": "Doit être un nombre positif"
+  },
+  "toast": {
+    "saved": "Enregistré avec succès",
+    "updated": "Mis à jour avec succès",
+    "deleted": "Supprimé avec succès",
+    "error": "Une erreur est survenue",
+    "loginSuccess": "Connexion réussie",
+    "loginError": "Identifiants invalides",
+    "messageSent": "Message envoyé avec succès",
+    "loggedOut": "Déconnexion réussie"
+  },
+  "confirm": {
+    "delete": "Êtes-vous sûr de vouloir supprimer cet élément ?",
+    "deleteDescription": "Cette action ne peut pas être annulée.",
+    "yes": "Oui, supprimer",
+    "no": "Annuler"
+  },
+  "hero": {
+    "title": "Découvrez notre collection de livres",
+    "subtitle": "Des milliers de livres vous attendent",
+    "searchPlaceholder": "Rechercher un livre, auteur..."
+  },
+  "product": {
+    "by": "par",
+    "noProducts": "Aucun produit trouvé",
+    "loadMore": "Charger plus",
+    "noDescription": "Aucune description disponible",
+    "whatsappMessage": "Bonjour, je suis intéressé(e) par ce livre: {{title}} ({{id}}) - Prix: {{price}} MAD"
+  },
+  "category": {
+    "all": "Toutes les catégories",
+    "noCategories": "Aucune catégorie"
+  },
+  "about": {
+    "title": "À propos de notre librairie",
+    "description": "Nous sommes passionnés par les livres et nous nous efforçons de vous offrir la meilleure sélection de titres dans toutes les catégories."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "N'hésitez pas à nous contacter pour toute question",
+    "info": "Informations de contact",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "hours": "Heures d'ouverture"
+  },
+  "admin": {
+    "title": "Administration",
+    "loginTitle": "Connexion Admin",
+    "welcome": "Bienvenue dans l'espace d'administration",
+    "stats": {
+      "totalProducts": "Total des produits",
+      "totalCategories": "Total des catégories",
+      "recentlyAdded": "Ajoutés récemment"
+    }
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "ar": "العربية"
+  }
+}

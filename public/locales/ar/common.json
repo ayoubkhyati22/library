@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "حولنا",
+    "contact": "اتصل بنا",
+    "admin": "الإدارة",
+    "dashboard": "لوحة التحكم",
+    "products": "المنتجات",
+    "categories": "الفئات"
+  },
+  "actions": {
+    "add": "إضافة",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "search": "بحث",
+    "filter": "تصفية",
+    "login": "تسجيل الدخول",
+    "logout": "تسجيل الخروج",
+    "submit": "إرسال",
+    "back": "رجوع",
+    "viewMore": "عرض المزيد",
+    "contactWhatsApp": "شراء"
+  },
+  "form": {
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "message": "الرسالة",
+    "password": "كلمة المرور",
+    "title": "العنوان",
+    "price": "السعر",
+    "author": "المؤلف",
+    "publisher": "الناشر",
+    "isbn": "رقم ISBN",
+    "description": "الوصف",
+    "category": "الفئة",
+    "image": "الصورة",
+    "required": "هذا الحقل مطلوب",
+    "emailInvalid": "بريد إلكتروني غير صحيح",
+    "minLength": "الحد الأدنى {{count}} حرف",
+    "positiveNumber": "يجب أن يكون رقما موجبا"
+  },
+  "toast": {
+    "saved": "تم الحفظ بنجاح",
+    "updated": "تم التحديث بنجاح",
+    "deleted": "تم الحذف بنجاح",
+    "error": "حدث خطأ",
+    "loginSuccess": "تم تسجيل الدخول بنجاح",
+    "loginError": "بيانات دخول غير صحيحة",
+    "messageSent": "تم إرسال الرسالة بنجاح",
+    "loggedOut": "تم تسجيل الخروج بنجاح"
+  },
+  "confirm": {
+    "delete": "هل أنت متأكد من أنك تريد حذف هذا العنصر؟",
+    "deleteDescription": "لا يمكن التراجع عن هذا الإجراء.",
+    "yes": "نعم، احذف",
+    "no": "إلغاء"
+  },
+  "hero": {
+    "title": "اكتشف مجموعة كتبنا",
+    "subtitle": "آلاف الكتب في انتظارك",
+    "searchPlaceholder": "البحث عن كتاب، مؤلف..."
+  },
+  "product": {
+    "by": "بواسطة",
+    "noProducts": "لا توجد منتجات",
+    "loadMore": "تحميل المزيد",
+    "noDescription": "لا يوجد وصف متاح",
+    "whatsappMessage": "مرحبا، أنا مهتم بهذا الكتاب: {{title}} ({{id}}) - السعر: {{price}} درهم"
+  },
+  "category": {
+    "all": "جميع الفئات",
+    "noCategories": "لا توجد فئات"
+  },
+  "about": {
+    "title": "حول مكتبتنا",
+    "description": "نحن متحمسون للكتب ونسعى جاهدين لنقدم لك أفضل مجموعة من العناوين في جميع الفئات."
+  },
+  "contact": {
+    "title": "اتصل بنا",
+    "description": "لا تتردد في الاتصال بنا لأي استفسار",
+    "info": "معلومات الاتصال",
+    "address": "العنوان",
+    "phone": "الهاتف",
+    "hours": "ساعات العمل"
+  },
+  "admin": {
+    "title": "الإدارة",
+    "loginTitle": "تسجيل دخول الإدارة",
+    "welcome": "مرحبا بك في منطقة الإدارة",
+    "stats": {
+      "totalProducts": "إجمالي المنتجات",
+      "totalCategories": "إجمالي الفئات",
+      "recentlyAdded": "المضاف حديثا"
+    }
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "ar": "العربية"
+  }
+}
