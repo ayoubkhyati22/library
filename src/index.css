@@ -56,7 +56,7 @@
   body {
     @apply bg-background text-foreground;
     transition: all 0.3s ease;
-    background-image: url('https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1200');
+    background-image: url('/bg-ass.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
