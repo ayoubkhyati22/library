@@ -25,6 +25,10 @@ export function ProductDetailPage() {
     loadProduct().catch(console.error);
   }, [id]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   const loadProduct = async () => {
     if (!id) return;
     

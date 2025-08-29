@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { BookOpen, Settings, LogOut } from 'lucide-react';
+import { BookOpen, Settings, LogOut, Home, Info, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from './language-switcher';
 import { Container } from './container';
@@ -24,9 +24,9 @@ export function Navbar() {
   };
 
   const navLinks = [
-    { to: '/', label: t('nav.home') },
-    { to: '/about', label: t('nav.about') },
-    { to: '/contact', label: t('nav.contact') },
+    { to: '/', label: t('nav.home'), icon: Home },
+    { to: '/about', label: t('nav.about'), icon: Info },
+    { to: '/contact', label: t('nav.contact'), icon: MessageCircle },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -49,7 +49,9 @@ export function Navbar() {
                     <Button
                       variant={isActive(link.to) ? 'default' : 'ghost'}
                       size="sm"
+                      className="gap-2"
                     >
+                      <link.icon className="h-4 w-4" />
                       {link.label}
                     </Button>
                   </Link>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
@@ -18,6 +18,7 @@ interface ProductCardProps {
 export function ProductCard({ product, category }: ProductCardProps) {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language as keyof typeof product.title;
+  const navigate = useNavigate();
 
   const handleWhatsAppClick = () => {
     const phone = import.meta.env.VITE_WHATSAPP_PHONE;
@@ -37,6 +38,11 @@ export function ProductCard({ product, category }: ProductCardProps) {
     openWhatsApp(url);
   };
 
+  const handleProductClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate(`/product/${product.id}`);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -45,7 +51,7 @@ export function ProductCard({ product, category }: ProductCardProps) {
       className="h-full"
     >
       <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow">
-        <Link to={`/product/${product.id}`}>
+        <div onClick={handleProductClick} className="cursor-pointer">
           <div className="aspect-square relative overflow-hidden">
             <img
               src={product.image}
@@ -59,15 +65,15 @@ export function ProductCard({ product, category }: ProductCardProps) {
               </Badge>
             )}
           </div>
-        </Link>
+        </div>
         
         <CardContent className="p-4 flex flex-col gap-3">
           <div className="space-y-1">
-            <Link to={`/product/${product.id}`}>
+            <div onClick={handleProductClick} className="cursor-pointer">
               <h3 className="font-semibold text-lg leading-tight line-clamp-2 hover:text-primary transition-colors">
                 {product.title[currentLang]}
               </h3>
-            </Link>
+            </div>
             <p className="text-sm text-muted-foreground line-clamp-3">
               {product.description[currentLang] || t('product.noDescription')}
             </p>
