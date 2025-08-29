@@ -74,13 +74,6 @@ export function HomePage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/10 to-secondary/10 py-16 overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-50"
-          style={{
-            backgroundImage: 'url(https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1200)'
-          }}
-        />
         <Container>
           <motion.div
             className="relative z-10"
