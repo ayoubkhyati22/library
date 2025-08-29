@@ -174,9 +174,11 @@ export function HomePage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-              className="lg:col-span-3 flex flex-col"
+              className="lg:col-span-3 flex flex-col h-fit"
             >
-              <ImageGallery />
+              <div className="sticky top-20">
+                <ImageGallery />
+              </div>
             </motion.div>
           </div>
         </div>

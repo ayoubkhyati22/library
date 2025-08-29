@@ -9,20 +9,15 @@ const featuredImage = {
 
 export function ImageGallery() {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.4 }}
-      className="h-full"
-    >
-      <Card className="overflow-hidden hover:shadow-lg transition-shadow h-full">
+    <div className="h-full flex flex-col">
+      <Card className="overflow-hidden hover:shadow-lg transition-shadow flex-1">
         <img
           src={featuredImage.url}
           alt={featuredImage.alt}
-          className="w-full h-full object-cover hover:scale-105 transition-transform"
+          className="w-full h-full object-cover hover:scale-105 transition-transform min-h-[600px]"
           loading="lazy"
         />
       </Card>
-    </motion.div>
+    </div>
   );
 }

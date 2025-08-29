@@ -139,7 +139,10 @@ export function ProductDetailPage() {
           {/* Back Button */}
           <Button
             variant="ghost"
-            onClick={() => navigate(-1)}
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              navigate(-1);
+            }}
             className="gap-2"
           >
             <ArrowLeft className="h-4 w-4" />
