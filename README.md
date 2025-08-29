@@ -43,7 +43,15 @@ Un projet React moderne avec support multilingue (FR/EN/AR) et RTL pour la gesti
    VITE_ADMIN_EMAIL=admin@librairie.com
    VITE_ADMIN_PASSWORD=admin123
    VITE_WHATSAPP_PHONE=2126XXXXXXXX
+   VITE_SUPABASE_URL=your_supabase_project_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
+
+   **Important:** Vous devez remplacer les valeurs Supabase par vos vraies clés :
+   - `VITE_SUPABASE_URL` : L'URL de votre projet Supabase
+   - `VITE_SUPABASE_ANON_KEY` : La clé publique anonyme de votre projet Supabase
+   
+   Ces valeurs se trouvent dans votre tableau de bord Supabase sous 'Project Settings' -> 'API'.
 
 4. **Démarrer le serveur de développement**
    ```bash
