@@ -114,7 +114,7 @@ export function HomePage() {
 
       {/* Products Section */}
       <section className="py-12">
-        <Container>
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Sidebar gauche - Filtres */}
             <motion.div
@@ -168,7 +168,7 @@ export function HomePage() {
               <ImageGallery />
             </motion.div>
           </div>
-        </Container>
+        </div>
       </section>
     </div>
   );
