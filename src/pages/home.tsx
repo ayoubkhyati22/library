@@ -81,7 +81,6 @@ export function HomePage() {
             backgroundImage: 'url(https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1200)'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
         <Container>
           <motion.div
             className="relative z-10"
